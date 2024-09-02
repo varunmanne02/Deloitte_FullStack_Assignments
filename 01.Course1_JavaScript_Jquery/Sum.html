@@ -1,0 +1,35 @@
+<!-- Create a web page to perform Sum operation using  JavaScript -->
+<html>
+<head></head>
+<body>
+<h3 >JavaScript Programming</h3>
+<hr/>
+First Number :  
+<input type="text" id="t1"  />
+<br></br>
+Second Number :  
+<input type="text" id="t2"  />
+<br></br>
+<input type="button" onclick="f1()" value="Sum"  />	 	
+ </br>
+<p id="p1"></p>
+
+<script>
+	function f1()
+	{
+	 
+        let paraObj = document.getElementById("p1");
+        let firobj = document.getElementById("t1");
+        let secobj = document.getElementById("t2");
+
+        //let firstnum = firobj.value;
+        //let secnum = secobj.value;
+
+        let totalsum = parseInt(firobj.value) + parseInt(secobj.value);
+
+        paraObj.innerHTML = "Result: "+ totalsum;
+
+	 }
+</script>
+</body>
+</html>

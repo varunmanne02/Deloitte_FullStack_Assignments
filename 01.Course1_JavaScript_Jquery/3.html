@@ -1,0 +1,55 @@
+<html>
+<head></head>
+<body>
+<h3 >JavaScript Programming</h3>
+<hr/>
+First Number :  
+<input type="text" id="t1"  />
+<br></br>
+Second Number :  
+<input type="text" id="t2"  />
+<br></br>
+<input type="button" onclick="f1(event)" value="Sum"  />
+<input type="button" onclick="f1(event)" value="Sub"  />
+<input type="button" onclick="f1(event)" value="Mul"  />
+<input type="button" onclick="f1(event)" value="Div"  />
+ </br>
+<p id="p1"></p>
+
+<script>
+	function f1(event)
+	{
+	 
+        let paraObj = document.getElementById("p1");
+        let firobj = document.getElementById("t1");
+        let secobj = document.getElementById("t2");
+
+        //let firstnum = firobj.value;
+        //let secnum = secobj.value;
+
+    
+        if(event.target.value == "Sum"){
+            let totalsum = parseInt(firobj.value) + parseInt(secobj.value);
+            paraObj.innerHTML = "Result: "+ totalsum;
+        }
+
+        if(event.target.value == "Sub"){
+            let totalsub = parseInt(firobj.value) - parseInt(secobj.value);
+            paraObj.innerHTML = "Result: "+ totalsub;
+        }
+
+        if(event.target.value == "Mul"){
+            let totalmul = parseInt(firobj.value) * parseInt(secobj.value);
+            paraObj.innerHTML = "Result: "+ totalmul;
+        }
+
+        if(event.target.value == "Div"){
+            let totaldiv = parseInt(firobj.value) / parseInt(secobj.value);
+            paraObj.innerHTML = "Result: "+ totaldiv;
+        }
+        
+
+	 }
+</script>
+</body>
+</html>

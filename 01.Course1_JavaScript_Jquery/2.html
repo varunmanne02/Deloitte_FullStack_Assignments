@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>Working with JavaScript</h3>
+    <hr />
+
+
+    <fieldset>
+
+        Product Name  : <input type="text" id="t1" />
+        <br /> <br />
+        Unit Price : <input type="text" id="t2" />
+        <br /><br />
+        Quantity : <input type="text" id="t3" />
+        <br /><br />
+        <input type="button" onclick="f1()" value="Get Total" />
+        <p id="p1"></p>
+    </fieldset>
+
+    <script>
+
+        function f1() {
+
+            let paraObj = document.getElementById("p1");
+            let pnameObj = document.getElementById("t1");
+            let priceObj = document.getElementById("t2");
+            let quantityObj = document.getElementById("t3");
+
+            let price = parseInt(priceObj.value);
+            let quantity = parseInt(quantityObj.value);
+
+            let discount = 0;
+            let total = price*quantity;
+            
+
+            if ( quantity>10 ) 
+            {
+                discount= 0.10*total;
+                total = total - discount;
+            }
+            if (quantity>20)
+            {
+                discount= 0.15*total;
+                total = total - discount;
+            } 
+            if(quantity>30)
+            {
+                disocunt= 0.20*total;
+                total = total - discount;
+            }
+            
+
+            paraObj.innerHTML = "Total Amount: "+ total;
+        }
+
+    </script>
+
+</body>
+
+</html>
