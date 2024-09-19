@@ -1,0 +1,28 @@
+<style>
+    .div1{
+      text-align: center;
+      border: 2px solid blue;
+      width: max-content;
+      padding: 5px;
+      margin: 5px;
+      border-radius: 10px;
+    }
+</style>
+
+<h3>AJAX Customer Example with Live API</h3>
+<hr/>
+
+<input type="button" value="Get Users" (click)="getDataButtonClick()"  />
+<br><br>
+
+
+<div style="display:flex; justify-content: center">
+    <div class="div1" *ngFor="let user of usersArray">
+      <img style="border-radius: 50%" src="{{user.avatar}}">
+      <p style="align-items: center;">Email: {{user.email}}</p>
+      <p style="align-items: center;">First Name: {{user.first_name}}</p>
+      <p style="align-items: center;">Last Name: {{user.last_name}}</p>
+    </div>
+</div>
+  
+
